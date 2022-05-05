@@ -12,33 +12,18 @@ html {
 
 body {
   font-family: "Montserrat";
-  background-image: url(./img/space.jpg);
+  border-radius: 1em;
+  background-image: url(./img/spacebg.jpg);
+  background-position: center;
   background-size: cover;
 }
 
-nav {
-  display: flex;
-  justify-content: space-between;
-}
-
-header nav .flexMenu {
-  width: 60%;
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  list-style: none;
-  justify-content: space-evenly;
-  padding: 40px;
-  font-size: 1.2rem;
-}
-
-.flexMenu li a {
-  text-decoration: none;
-  color: white;
+img {
+  width: 15em;
 }
 
 .title, footer h5 {
-  color: #0095ff;
+  color: white;
   font-size: 2.5rem;
   text-align: center;
   padding: 40px;
@@ -62,38 +47,71 @@ section {
   grid-template-areas: "bannerUno bannerUno noticiaDos noticiaTres" "bannerUno bannerUno noticiaCuatro noticiaCinco" "noticiaSeis noticiaSeis noticiaSeis noticiaSeis";
 }
 
+.flex, .bannerUno {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  color: aliceblue;
+}
+
 .bannerUno {
   grid-area: bannerUno;
+  background-color: hsla(0deg, 0%, 100%, 0.1);
 }
 
 .noticiaTres {
   grid-area: noticiaTres;
   border-radius: 1em;
-  background-color: #3b5998;
+  background-image: url(./img/photo.jpg);
+  background-position: center;
+  background-size: cover;
 }
 
 .noticiaDos {
   grid-area: noticiaDos;
   border-radius: 1em;
-  background-color: #00e461;
+  background-image: url(./img/photo2.jpg);
+  background-position: center;
+  background-size: cover;
 }
 
 .noticiaCuatro {
   grid-area: noticiaCuatro;
   border-radius: 1em;
-  background-color: #55acee;
+  background-image: url(./img/photo3.jpg);
+  background-position: center;
+  background-size: cover;
 }
 
 .noticiaCinco {
   grid-area: noticiaCinco;
   border-radius: 1em;
-  background-color: #007bb5;
+  background-image: url(./img/photo4.jpg);
+  background-position: center;
+  background-size: cover;
 }
 
 .noticiaSeis {
   grid-area: noticiaSeis;
   border-radius: 1em;
-  background-color: #4dc247;
+  background-image: url(./img/photo5.jpg);
+  background-position: center;
+  background-size: cover;
+}
+
+.photo h3 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: aliceblue;
+  height: 100%;
+  opacity: 0;
+  visibility: none;
+}
+.photo h3:hover {
+  opacity: 0.5;
+  visibility: visible;
 }
 
 /* Footer */

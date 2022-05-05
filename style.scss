@@ -1,10 +1,11 @@
 @charset "UTF-8";
 //Variables 
-$facebook:#3b5998;
-$linkedin:#007bb5;
-$whatsapp:#4dc247;
-$twitter:#55acee;
-$spotify:#00e461;
+$bg-body:url(./img/spacebg.jpg);
+$one:url(./img/photo.jpg);
+$two:url(./img/photo2.jpg);
+$three:url(./img/photo3.jpg);
+$four:url(./img/photo4.jpg);
+$five:url(./img/photo5.jpg);
 /* generales */
 html {
   /* etiqueta raíz */
@@ -14,34 +15,24 @@ html {
   margin: 0px;
   padding: 0px; }
 
-body {
-  font-family: 'Montserrat'; 
-  background-image: url(./img/space.jpg);
+@mixin img($photo) {
+  border-radius: 1em;
+  background-image: $photo;
+  background-position: center;
   background-size: cover;
 }
 
-nav{
-    display: flex;
-    justify-content: space-between;
+body {
+  font-family: 'Montserrat'; 
+  @include img($bg-body)
 }
 
-header nav .flexMenu {
-    width: 60%;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    list-style: none;
-    justify-content: space-evenly;
-    padding: 40px;
-    font-size: 1.2rem; 
+img{
+  width: 15em;
 }
-
-.flexMenu li a {
-  text-decoration: none;
-  color: white; }
 
 .title {
-  color: #0095ff;
+  color: white;
   font-size: 2.5rem;
   text-align: center;
   padding: 40px; }
@@ -66,35 +57,54 @@ section{
  "bannerUno bannerUno noticiaCuatro noticiaCinco"
  "noticiaSeis noticiaSeis noticiaSeis noticiaSeis"; }
 
-
-@mixin banner($color) {
-    border-radius: 1em;
-    background-color: $color;
+.flex{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  color: aliceblue;
 }
 
 .bannerUno {
   grid-area: bannerUno;
+  @extend .flex;
+  background-color: hsla(0, 0, 100, .1);
  }
 
 .noticiaTres {
   grid-area: noticiaTres;
-  @include banner($facebook) }
+  @include img($one) }
 
 .noticiaDos {
   grid-area: noticiaDos;
-  @include banner($spotify)  }
+  @include img($two)  }
 
 .noticiaCuatro {
   grid-area: noticiaCuatro;
-  @include banner($twitter)  }
+  @include img($three)  }
 
 .noticiaCinco {
   grid-area: noticiaCinco;
-  @include banner($linkedin)  }
+  @include img($four)  }
 
 .noticiaSeis {
   grid-area: noticiaSeis;
-  @include banner($whatsapp)  }
+  @include img($five)}
+
+.photo h3{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: aliceblue;
+  height: 100%;
+  opacity: 0;
+  visibility: none;
+
+  &:hover{
+    opacity: .5;
+    visibility: visible;
+  }
+}
 
 
 /* Footer */

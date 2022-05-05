@@ -1,0 +1,4 @@
+Descripción: mediante la etiqueta meta name description, agregué el siguiente párrafo que explica en pocas palabras el contenido de mi sitio: “Este es el sitio web de ToSpace una pagina de galerias de fotos del espacio, astronautas, planetas y mas"
+Palabras clave: mediante la etiqueta meta name keywords, agregué las palabras clave que acompañarán a todas las páginas de mi sitio: "ESPACIO, UNIVERSO, ASTRONAUTA, PLANETAS, TIERRA, GALAXIAS"
+Encabezado: para el encabezado del h1 utilicé el texto “To Space Nombre de la pagina”, luego el h2 vendria a ser el encabezado con "Galeria del Espacio"
+
