@@ -1,0 +1,109 @@
+@charset "UTF-8";
+//Variables 
+$facebook:#3b5998;
+$linkedin:#007bb5;
+$whatsapp:#4dc247;
+$twitter:#55acee;
+$spotify:#00e461;
+/* generales */
+html {
+  /* etiqueta raíz */
+  font-size: 62.5%; }
+
+* {
+  margin: 0px;
+  padding: 0px; }
+
+body {
+  font-family: 'Montserrat'; 
+  background-image: url(./img/space.jpg);
+  background-size: cover;
+}
+
+nav{
+    display: flex;
+    justify-content: space-between;
+}
+
+header nav .flexMenu {
+    width: 60%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    list-style: none;
+    justify-content: space-evenly;
+    padding: 40px;
+    font-size: 1.2rem; 
+}
+
+.flexMenu li a {
+  text-decoration: none;
+  color: white; }
+
+.title {
+  color: #0095ff;
+  font-size: 2.5rem;
+  text-align: center;
+  padding: 40px; }
+
+
+section{
+    width: 80%;
+    margin: 0 auto;
+}
+
+/*Grilla */
+.grid-container {
+  display: grid;
+  margin: 40px 0 40px 0;
+  grid-template-columns: repeat(4, 25%);
+  grid-template-rows: repeat(3, 200px);
+  gap: .5em;
+  text-align: center;
+  justify-content: stretch;
+  font-size: 1.5rem;
+  grid-template-areas: "bannerUno bannerUno noticiaDos noticiaTres"
+ "bannerUno bannerUno noticiaCuatro noticiaCinco"
+ "noticiaSeis noticiaSeis noticiaSeis noticiaSeis"; }
+
+
+@mixin banner($color) {
+    border-radius: 1em;
+    background-color: $color;
+}
+
+.bannerUno {
+  grid-area: bannerUno;
+ }
+
+.noticiaTres {
+  grid-area: noticiaTres;
+  @include banner($facebook) }
+
+.noticiaDos {
+  grid-area: noticiaDos;
+  @include banner($spotify)  }
+
+.noticiaCuatro {
+  grid-area: noticiaCuatro;
+  @include banner($twitter)  }
+
+.noticiaCinco {
+  grid-area: noticiaCinco;
+  @include banner($linkedin)  }
+
+.noticiaSeis {
+  grid-area: noticiaSeis;
+  @include banner($whatsapp)  }
+
+
+/* Footer */
+footer {
+  background-color: hsla(0, 0, 100, .1);
+  width: 100%;
+  height: 100px;
+ }
+
+footer h5 {
+  @extend .title;
+}
